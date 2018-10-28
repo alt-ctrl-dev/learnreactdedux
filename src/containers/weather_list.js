@@ -8,7 +8,6 @@ class WeatherList extends Component{
 
     renderWeather(cityData){
         if(!cityData || cityData.error){
-            console.log(cityData)
             alert(cityData.message);
             return (null);
         }
@@ -22,7 +21,7 @@ class WeatherList extends Component{
         return(
             <tr key={name+city.country}>
                 <td><GoogleMap lon={lon} lat={lat} /> <b>{name}, {city.country}</b></td>
-                <td><LineChart data={temps} color={"red"} units={"˚C"}/></td>
+                <td><LineChart limit={5} data={temps} color={"red"} units={"˚C"}/></td>
                 <td><LineChart data={press} color={"green"} units={"hPa"}/></td>
                 <td><LineChart data={humids} color={"blue"} units={"%"}/></td>
             </tr>

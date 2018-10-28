@@ -14,7 +14,7 @@ class GoogleMap extends Component{
         });
     }
     render(){
-        return <div ref="map" />
+        return <div ref="map" />;
     }
 }
 
