@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
+import WeatherReducer from "./reducer_weather";
+import { snackbarReducer } from 'react-redux-snackbar'; 
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  weather:WeatherReducer,
+  snackbar: snackbarReducer
 });
 
 export default rootReducer;
